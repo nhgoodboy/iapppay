@@ -9,8 +9,12 @@
             <text>PC支付</text>
         </div>
 
-        <div class="button" @click="test">
+        <div class="button" @click="testAndroidModule">
             <text>Android聚合支付</text>
+        </div>
+
+        <div class="button" @click="test">
+            <text>测试原生模块</text>
         </div>
     </div>
 </template>
@@ -19,6 +23,7 @@
     // if (process.env.NODE_ENV === 'development') require('Config');
 
     let _this;
+    let IapppayModule = weex.requireModule('IapppayModule');
 
     export default {
         data() {
@@ -34,43 +39,19 @@
         },
 
         methods: {
+            testAndroidModule() {
+                IapppayModule.printLog("I am a weex Module");
+            },
+
             test() {
 
             },
 
-            H5_order() {
-                this.$fetch({
-                    method: 'GET',    // 大写
-                    name: 'h5_order',
-                    data: {
-                        waresId: 1
-                    }
-                }).then(resData => {
-                    this.$notice.alert({
-                        title: '支付URL',
-                        message: resData,
-                        okTitle: '去支付',
-                        callback() {
-                            _this.$router.openBrowser(resData);
-                        }
-                    })
-                }, error => {
-                    this.$notice.alert({
-                        title: '这是一个弹窗',
-                        message: error,
-                        okTitle: 'ok',
-                        callback() {
-
-                        }
-                    })
-                })
-            },
-
             order(type) {
                 let name = null;
-                if(type === 'h5'){
+                if (type === 'h5') {
                     name = 'h5_order'
-                }else if (type === 'pc'){
+                } else if (type === 'pc') {
                     name = 'pc_order'
                 }
                 this.$fetch({
@@ -102,8 +83,6 @@
 
         }
     }
-
-
 </script>
 
 <style lang="sass" src="./home.scss" scoped></style>
