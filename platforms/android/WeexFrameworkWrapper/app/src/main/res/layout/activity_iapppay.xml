@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f2f2f2"
+    tools:context="com.benmu.wx.iapppay.IapppayActivity"
+    >
+
+    <Button
+        android:id="@+id/btn_client_order_one"
+        android:layout_height="60dp"
+        android:layout_width="200dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="100px"
+        android:background="#00baf2"
+        android:text="@string/client_order_one"
+        android:textColor="#fff"
+        android:textSize="17sp"
+        />
+
+    <Button
+        android:id="@+id/btn_client_order_two"
+        android:layout_height="60dp"
+        android:layout_width="200dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="150dp"
+        android:background="#00baf2"
+        android:text="@string/client_order_two"
+        android:textColor="#fff"
+        android:textSize="17sp"
+        />
+
+    <Button
+        android:id="@+id/btn_server_order"
+        android:layout_height="60dp"
+        android:layout_width="200dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="250dp"
+        android:background="#00baf2"
+        android:text="@string/server_order"
+        android:textColor="#fff"
+        android:textSize="17sp"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_container"
+        />
+
+
+</FrameLayout>

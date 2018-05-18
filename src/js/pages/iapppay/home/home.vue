@@ -16,6 +16,10 @@
         <div class="button" @click="test">
             <text>测试原生模块</text>
         </div>
+
+        <div class="button" @click="loginIapppay">
+            <text>登录爱贝账号</text>
+        </div>
     </div>
 </template>
 
@@ -39,6 +43,10 @@
         },
 
         methods: {
+            loginIapppay() {
+
+            },
+
             testAndroidModule() {
                 IapppayModule.printLog("I am a weex Module");
             },
