@@ -28,8 +28,8 @@ import java.net.URLDecoder;
 public class IapppayActivity extends Activity implements View.OnClickListener {
 
     private String acid; // 需要渠道分包功能，请传入对应渠道标识ACID, 可以为空
-    private String serverOrderaddr = "http://192.168.102.249:8081/iapppay/server_order";
-    private String clientOrderaddr = "http://192.168.102.249:8081/iapppay/client_order";
+    private String serverOrderaddr = "http://192.168.102.13:8081/iapppay/server_order";
+    private String clientOrderaddr = "http://192.168.102.13:8081/iapppay/client_order";
     private final int GETVALUE = 0, POSTVALUE = 1;
     private Handler mHandler;
 

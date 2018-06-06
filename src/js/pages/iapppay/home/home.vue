@@ -20,6 +20,10 @@
         <div class="button" @click="loginIapppay">
             <text>登录爱贝账号</text>
         </div>
+
+        <!--<div class="button" @click="contractWare">-->
+            <!--<text>契约商品</text>-->
+        <!--</div>-->
     </div>
 </template>
 
@@ -43,6 +47,10 @@
         },
 
         methods: {
+            contractWare() {
+
+            },
+
             loginIapppay() {
 
             },
